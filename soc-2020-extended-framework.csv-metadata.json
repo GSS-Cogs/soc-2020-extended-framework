@@ -1,0 +1,67 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "https://www.ons.gov.uk/methodology/classificationsandstandards/standardoccupationalclassificationsoc/standardoccupationalclassificationsocextensionproject#dataset",
+    "url": "soc-2020-extended-framework.csv",
+    "rdfs:label": "Standard Occupational Classifications (SOC) 2020 Extended Framework",
+    "dc:title": "Standard Occupational Classifications (SOC) 2020 Extended Framework",
+    "rdfs:comment": "The Standard Occupational Classification (SOC) is a coding framework used to classify occupations, enabling comparisons of occupations across different datasets. It assigns all jobs a 4-digit code based on the skills and qualifications needed for the job.",
+    "dc:issued": {
+        "@type": "dateTime",
+        "@value": "2021-04-21T00:00:00.000000"
+    },
+    "dc:license": {
+        "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+    },
+    "dc:creator": {
+        "@id": "https://www.ons.gov.uk/"
+    },
+    "dc:publisher": {
+        "@id": "https://www.ons.gov.uk/"
+    },
+    "dcat:contactPoint": {
+        "@id": "mailto:SOCExt@ons.gov.uk"
+    },
+    "dcat:landingPage": {
+        "@id": "https://www.ons.gov.uk/methodology/classificationsandstandards/standardoccupationalclassificationsoc/standardoccupationalclassificationsocextensionproject"
+    },
+    "rdfs:type": {
+        "@id": "skos:ConceptScheme"
+    },
+    "tableSchema": {
+        "columns": [
+            {
+                "titles": "Group Title",
+                "name": "group_title",
+                "propertyUrl": "rdfs:label"
+            },
+            {
+                "titles": "Notation",
+                "name": "notation",
+                "datatype": {
+                    "base": "string",
+                    "format": "^-?[\\w\\.\\/\\+]+(-[\\w\\.\\/\\+]+)*$"
+                },
+                "required": true,
+                "propertyUrl": "skos:notation"
+            },
+            {
+                "titles": "Parent",
+                "name": "parent",
+                "propertyUrl": "skos:broader",
+                "valueUrl": "https://www.ons.gov.uk/methodology/classificationsandstandards/standardoccupationalclassificationsoc/standardoccupationalclassificationsocextensionproject#{parent}"
+            },
+            {
+                "virtual": true,
+                "propertyUrl": "rdf:type",
+                "valueUrl": "skos:Concept"
+            },
+            {
+                "virtual": true,
+                "propertyUrl": "skos:inScheme",
+                "valueUrl": "https://www.ons.gov.uk/methodology/classificationsandstandards/standardoccupationalclassificationsoc/standardoccupationalclassificationsocextensionproject#dataset"
+            }
+        ],
+        "primaryKey": "notation",
+        "aboutUrl": "https://www.ons.gov.uk/methodology/classificationsandstandards/standardoccupationalclassificationsoc/standardoccupationalclassificationsocextensionproject#{notation}"
+    }
+}
