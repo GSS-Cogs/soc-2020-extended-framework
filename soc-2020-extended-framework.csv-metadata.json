@@ -24,7 +24,7 @@
     "dcat:landingPage": {
         "@id": "https://www.ons.gov.uk/methodology/classificationsandstandards/standardoccupationalclassificationsoc/standardoccupationalclassificationsocextensionproject"
     },
-    "rdfs:type": {
+    "rdf:type": {
         "@id": "skos:ConceptScheme"
     },
     "tableSchema": {
